@@ -1,4 +1,5 @@
 ---
+import Layout from "@/layouts/Layout.astro";
 import "../styles/globals.css";
 import { ModeToggle } from "@/components/ModeToggle";
 ---
@@ -26,10 +27,7 @@ import { ModeToggle } from "@/components/ModeToggle";
     });
   }
 </script>
-
-<html lang="en">
-  <body>
-    <h1>Astro</h1>
-    <ModeToggle client:load />
-  </body>
-</html>
+<Layout title="Home Page">
+  <h1>Astro</h1>
+  <ModeToggle client:load />
+</Layout>
