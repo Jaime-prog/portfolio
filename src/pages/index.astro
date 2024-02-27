@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import "../styles/globals.css";
+import { ModeToggle } from "@/components/ModeToggle.tsx";
 ---
 
 <script is:inline>
@@ -31,5 +32,6 @@ import "../styles/globals.css";
 <html lang="en">
   <body>
     <h1>Astro</h1>
+    <ModeToggle client:load />
   </body>
 </html>
