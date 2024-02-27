@@ -6,6 +6,8 @@ interface Props {
 const { title } = Astro.props;
 
 import Navbar from "@/components/Navbar.astro";
+// Supports weights 100-900
+import "@fontsource-variable/onest";
 ---
 
 <!doctype html>
@@ -27,7 +29,7 @@ import Navbar from "@/components/Navbar.astro";
   :root {
   }
   html {
-    font-family: system-ui, sans-serif;
+    font-family: "Onest Variable", system-ui, sans-serif;
   }
   code {
     font-family:
@@ -39,5 +41,10 @@ import Navbar from "@/components/Navbar.astro";
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+  body {
+    font-family: "Onest Variable", sans-serif;
+    flex-direction: column;
+    justify-content: center;
   }
 </style>

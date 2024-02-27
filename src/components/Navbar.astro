@@ -1,48 +1,51 @@
 ---
-import { ModeToggle } from "@/components/ModeToggle";
-
 const navItems = [
   {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
+    title: "Experience",
+    label: "experience",
+    url: "/#experience",
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
+    title: "Projects",
+    label: "projects",
     url: "/#proyectos",
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
+    title: "About",
+    label: "about",
+    url: "/#about",
   },
   {
-    title: "Contacto",
-    label: "contacto",
+    title: "Contact",
+    label: "contact",
     url: "mailto:jaimelopez@proton.me",
   },
 ];
+
+let selectedLink = "";
+function selectLink(url: string) {
+  selectedLink = url;
+}
 ---
 
 <header
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex px-3 text-lg font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-cente"
   >
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          class={`relative block px-2 py-2 transition ${selectedLink === link.url ? "selected" : ""}`}
           aria-label={link.label}
           href={link.url}
+          onclick={`selectLink('${link.url}')`}
         >
           {link.title}
         </a>
       ))
     }
-    <ModeToggle />
   </nav>
 </header>
 
