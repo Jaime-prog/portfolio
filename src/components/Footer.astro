@@ -1,5 +1,9 @@
 ---
 const currentYear = new Date().getFullYear()
+
+import { LinkedinIcon } from "lucide-react"
+import { GithubIcon } from "lucide-react"
+import { BriefcaseIcon } from "lucide-react";
 ---
 
 <footer
@@ -17,18 +21,21 @@ const currentYear = new Date().getFullYear()
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
      
-      <ul class="flex flex-col">
+    <ul class="flex flex-col text-base">
         <li>
             <span class="text-slate-700 font-bold text-base">Elsewhere</span>
         </li>
-        <li>
+        <li class="flex flex-row justify-between">
             <a href="https://github.com/Jaime-prog" class="hover:underline me-4 md:me-6">Github</a>
+            <GithubIcon size={20} />
         </li>
-        <li>
-            CV
+        <li class="flex flex-row justify-between">
+            <a href="https://github.com/Jaime-prog" class="hover:underline me-4 md:me-6">CV</a>
+            <BriefcaseIcon size={20} className="items-end"/>
         </li>
-        <li>
+        <li class="flex flex-row justify-between">
             <a href="https://github.com/Jaime-prog" class="hover:underline me-4 md:me-6">LinkedIn</a>
+            <LinkedinIcon size={20} />
         </li>
     </ul>
       </li>
