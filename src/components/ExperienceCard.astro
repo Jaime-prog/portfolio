@@ -8,12 +8,12 @@ const { title, backgroundImage } = Astro.props;
 
 const PROJECTS = [
   {
-    logo: "/projects/logo_pilates.webp",
-    image: "/projects/art.jpeg",
+    logo: "/projects/logo_bco.png",
+    image: "/projects/bg_pilates.jpg",
   },
   {
-    logo: "/projects/logo_pilates.webp",
-    image: "/projects/art.jpeg",
+    logo: "/projects/logo_bco.png",
+    image: "/projects/bg_pilates.jpg",
   },
 ];
 ---
@@ -25,13 +25,13 @@ const PROJECTS = [
           <img
             src={image}
             alt={title}
-            class="object-cover w-full h-full transform group-hover:-translate-y-5 transition-transform duration-500"
+            class="object-cover w-full h-full transform group-hover:-translate-y-3 transition-transform duration-500 rounded-md"
             loading="lazy"
           />
           <img
             src={logo}
             alt={title}
-            class="absolute top-0 left-0 px-5 py-5 w-28 h-28 object-cover transform group-hover:scale-110 transition-transform duration-500"
+            class="absolute top-0 left-0 px-5 py-5 w-28 h-28 object-cover transform group-hover:-translate-y-3 transition-transform duration-500"
             loading="lazy"
           />
         </div>
