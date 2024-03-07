@@ -2,6 +2,11 @@
 import LinkButton from "./LinkButton.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import Python from "./icons/Python.astro"
+import TensorFlow from "./icons/TensorFlow.astro"
+import Figma from "./icons/Figma.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import MySQL from "./icons/MySQL.astro"
 
 
 const TAGS = {
@@ -15,6 +20,31 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#4786f8] text-white",
+    icon: Python,
+  },
+  TENSORFLOW: {
+    name: "TensorFlow",
+    class: "bg-[#Fdb854] text-white",
+    icon: TensorFlow,
+  },
+  FIGMA: {
+    name: "Figma",
+    class: "bg-[#Cb1260] text-white",
+    icon: Figma,
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-[#169873] text-white",
+    icon: NodeJS,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758f] text-white",
+    icon: MySQL,
+  },
 }
 const PROJECTS = [
 {
@@ -24,7 +54,7 @@ const PROJECTS = [
     link: "https://casaenqueretaro.com.mx/",
     github: "https://github.com/Genesis-Solutions/Kiara-Bienes-Raices/tree/develop",
     image: "/projects/kiara.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.NODEJS, TAGS.FIGMA, TAGS.MYSQL, TAGS.TAILWIND],
   },
   {
     title: "Store Sales - Time Series Forecasting",
@@ -33,7 +63,7 @@ const PROJECTS = [
     link: "https://www.kaggle.com/competitions/store-sales-time-series-forecasting",
     github: "https://github.com/FlavioRr/StoreSalesForecastingTC3006C",
     image: "/projects/salesforecast.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PYTHON, TAGS.TENSORFLOW],
   },
   {
     title: "Proyecto de Clasificación de Imágenes Deportivas con Transfer Learning y CNN",
@@ -41,7 +71,7 @@ const PROJECTS = [
       "Este proyecto detalla la implementación de una Convolutional Neural Network (CNN) para la clasificación de imágenes deportivas utilizando técnicas de Transfer Learning. Centrándose en el conjunto de datos _100 Sports Image Classification_, se emplearon bibliotecas como TensorFlow, Keras, Pandas, Matplotlib y NumPy para lograr un rendimiento óptimo",
     github: "https://github.com/Jaime-prog/AI_DataScience_NeuralSight/tree/main",
     image: "/projects/sports.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PYTHON, TAGS.TENSORFLOW],
   },
   {
     title: "Oden Rain - Prototipo de aplicación sobre cuidado de plantas",
@@ -49,7 +79,7 @@ const PROJECTS = [
       "Este proyecto tuvo como enfoque el diseño del prototipo de una aplicación movil que tenía como objetivo ayudar a las personas a tener un cuidado personalizado de cada una de sus plantas en sus hogares",
     link: "https://www.figma.com/file/70sdBSX7VK7FeUPnlM0dPa/Work-for-Scholarship?type=design&node-id=124%3A59&mode=design&t=zJ1uirDwjU8XeP49-1",
     image: "/projects/odenrain.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.FIGMA],
   },
   {
     title: "Rediseño de página web para servicio social",
@@ -57,7 +87,7 @@ const PROJECTS = [
       "Aquí tuve la oportunidad de rediseñar la página web de la Universidad Tecnológica de Querétaro para el servicio social. El objetivo era mejorar la experiencia del usuario y la accesibilidad de la información para los estudiantes.",
     link: "https://www.figma.com/file/70sdBSX7VK7FeUPnlM0dPa/Work-for-Scholarship?type=design&node-id=3%3A258&mode=design&t=zJ1uirDwjU8XeP49-1",
     image: "/projects/scholarship.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.FIGMA],
   },
 ]
 ---
@@ -81,7 +111,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-3 `}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
