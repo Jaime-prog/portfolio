@@ -8,26 +8,30 @@ const { title, backgroundImage } = Astro.props;
 
 const PROJECTS = [
   {
-    logo: "/projects/logo_bco.png",
+    logo: "/projects/logo_bco.webp",
     image: "/projects/bg_pilates.jpg",
+    url: "https://figurepilates.com/",
   },
   {
-    logo: "/projects/logo_bco.png",
+    logo: "/projects/logo_bco.webp",
     image: "/projects/bg_pilates.jpg",
+    url: "/pilates",
   },
 ];
 ---
 
 <div class="flex flex-row gap-x-5">
     {
-      PROJECTS.map(({ image, logo }) => (
+      PROJECTS.map(({ image, logo,url }) => (
         <div class="relative h-96 group">
-          <img
-            src={image}
-            alt={title}
-            class="object-cover w-full h-full transform group-hover:-translate-y-3 transition-transform duration-500 rounded-md"
-            loading="lazy"
-          />
+          <a href={url}>
+            <img
+              src={image}
+              alt={title}
+              class="object-cover w-full h-full transform group-hover:-translate-y-3 transition-transform duration-500 rounded-md"
+              loading="lazy"
+            />
+          </a>
           <img
             src={logo}
             alt={title}
